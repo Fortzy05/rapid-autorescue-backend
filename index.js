@@ -9,13 +9,21 @@ const app = express();
 const PORT = 5000;
 
 // ✅ Middleware
+// app.use(
+//   cors({
+//     origin: [
+//       "https://www.rapidautorescue.co.uk",
+//       "http://localhost:5173",
+//       "http://127.0.0.1:5173",
+//     ],
+//   })
+// );
+  
 app.use(
   cors({
-    origin: [
-      "https://www.rapidautorescue.co.uk",
-      "http://localhost:5173",
-      "http://127.0.0.1:5173",
-    ],
+    origin: "*", // ❗️Temporary: allows all origins
+    methods: ["GET", "POST"],
+    allowedHeaders: ["Content-Type"],
   })
 );
   
