@@ -175,6 +175,11 @@ app.post("/api/contact", async (req, res) => {
 app.get("/", (req, res) => {
   res.send("🚀 Rapid Auto Rescue API is running!");
 });
+
+app.get("/api/bookings", (req, res) => {
+  res.send("✅ Booking API is alive");
+});
+  
   
 
 app.listen(PORT, () => {
