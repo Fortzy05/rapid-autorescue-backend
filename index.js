@@ -172,9 +172,11 @@ app.post("/api/contact", async (req, res) => {
   }
 });
 
-// ✅ Send Email Notification
+app.get("/", (req, res) => {
+  res.send("🚀 Rapid Auto Rescue API is running!");
+});
+  
 
-// ✅ Start server
 app.listen(PORT, () => {
   console.log(`Booking API server running on http://localhost:${PORT}`);
 });
